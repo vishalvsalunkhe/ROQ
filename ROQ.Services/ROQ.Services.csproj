@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{848CD7A0-88D3-4CD3-9E5A-7CA27D0D26F2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ROQ.Services</RootNamespace>
+    <AssemblyName>ROQ.Services</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Interfaces\ILogActionService.cs" />
+    <Compile Include="Interfaces\ILogExceptionService.cs" />
+    <Compile Include="Interfaces\IUserService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\LogActionService.cs" />
+    <Compile Include="Services\LogExceptionService.cs" />
+    <Compile Include="Services\UserService.cs" />
+    <Compile Include="ViewModels\UsersViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ROQ.Common\ROQ.Common.csproj">
+      <Project>{90903fdc-7b37-41af-87e9-b70d86dcf9e6}</Project>
+      <Name>ROQ.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ROQ.Data\ROQ.Data.csproj">
+      <Project>{3d89158d-d9f0-43cf-a796-ad70de4a41b0}</Project>
+      <Name>ROQ.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ROQ.Repository\ROQ.Repository.csproj">
+      <Project>{cc8fa070-9ca2-44b0-9b48-9a8ac13466b8}</Project>
+      <Name>ROQ.Repository</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
