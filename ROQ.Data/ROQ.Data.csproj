@@ -51,9 +51,9 @@
     <Compile Include="Entities\LogActions.cs" />
     <Compile Include="Entities\LogException.cs" />
     <Compile Include="Entities\Users.cs" />
-    <Compile Include="Migrations\201907012019576_ROQDb-v1.cs" />
-    <Compile Include="Migrations\201907012019576_ROQDb-v1.Designer.cs">
-      <DependentUpon>201907012019576_ROQDb-v1.cs</DependentUpon>
+    <Compile Include="Migrations\201907032005594_NwTbl-LogAction-LogException-Users.cs" />
+    <Compile Include="Migrations\201907032005594_NwTbl-LogAction-LogException-Users.Designer.cs">
+      <DependentUpon>201907032005594_NwTbl-LogAction-LogException-Users.cs</DependentUpon>
     </Compile>
     <Compile Include="ROQDBContext.cs" />
     <Compile Include="ROQInitializer.cs" />
@@ -67,8 +67,14 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201907012019576_ROQDb-v1.resx">
-      <DependentUpon>201907012019576_ROQDb-v1.cs</DependentUpon>
+    <ProjectReference Include="..\ROQ.Common\ROQ.Common.csproj">
+      <Project>{90903FDC-7B37-41AF-87E9-B70D86DCF9E6}</Project>
+      <Name>ROQ.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201907032005594_NwTbl-LogAction-LogException-Users.resx">
+      <DependentUpon>201907032005594_NwTbl-LogAction-LogException-Users.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

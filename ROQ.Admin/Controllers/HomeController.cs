@@ -9,15 +9,10 @@ namespace ROQ.Admin.Controllers
 {
     public class HomeController : Controller
     {
-        IUserService _IUserService;
-
-        public HomeController(IUserService iUserService)
-        {
-            _IUserService = iUserService;
-        }
+       
         public ActionResult Index()
         {
-            var users = _IUserService.GetUserByID(1);
+           // var users = _IUserService.GetUserByID(1);
             return View();
         }
 

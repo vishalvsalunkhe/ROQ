@@ -49,7 +49,8 @@
     <Compile Include="Services\LogActionService.cs" />
     <Compile Include="Services\LogExceptionService.cs" />
     <Compile Include="Services\UserService.cs" />
-    <Compile Include="ViewModels\UsersViewModel.cs" />
+    <Compile Include="ViewModels\LoginUserVM.cs" />
+    <Compile Include="ViewModels\UsersVM.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ROQ.Common\ROQ.Common.csproj">

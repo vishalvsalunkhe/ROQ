@@ -3,7 +3,7 @@ namespace ROQ.Data.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class ROQDbv1 : DbMigration
+    public partial class NwTblLogActionLogExceptionUsers : DbMigration
     {
         public override void Up()
         {
@@ -39,14 +39,20 @@ namespace ROQ.Data.Migrations
                 c => new
                     {
                         ID = c.Long(nullable: false, identity: true),
-                        QID = c.String(),
-                        UserName = c.String(),
-                        IsActive = c.Boolean(nullable: false),
-                        Domain = c.String(),
-                        ArabicName = c.String(),
-                        EnglistName = c.String(),
+                        EmpNo = c.String(nullable: false),
+                        FullName = c.String(nullable: false),
+                        Gender = c.String(),
                         EmailID = c.String(),
                         MobileNo = c.String(),
+                        BirthDate = c.DateTime(nullable: false),
+                        UserName = c.String(nullable: false),
+                        Password = c.String(),
+                        IsPasswordReset = c.Boolean(nullable: false),
+                        IsActive = c.Boolean(nullable: false),
+                        CreatedBy = c.Int(),
+                        CreationDate = c.DateTime(),
+                        ModifiedBy = c.Int(),
+                        ModifiedDate = c.DateTime(),
                     })
                 .PrimaryKey(t => t.ID);
             

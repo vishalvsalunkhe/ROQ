@@ -30,15 +30,6 @@ namespace ROQ.Repository.Repositories
 
             return result;
         }
-        //public List<PersonalDetails> GetUsersByRole(string RoleID)
-        //{
-        //    var result = Context.PersonalDetails
-        //        .Include("Users")
-        //        .Where(x => x.Users.Role_ID == RoleID && x.Users.IsActive == true);
-        //    if (result == null)
-        //        return new List<PersonalDetails>();
-
-        //    return result.ToList();
-        //}
+     
     }
 }

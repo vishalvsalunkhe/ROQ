@@ -7,13 +7,13 @@ namespace ROQ.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class ROQDbv1 : IMigrationMetadata
+    public sealed partial class NwTblLogActionLogExceptionUsers : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(ROQDbv1));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(NwTblLogActionLogExceptionUsers));
         
         string IMigrationMetadata.Id
         {
-            get { return "201907012019576_ROQDb-v1"; }
+            get { return "201907032005594_NwTbl-LogAction-LogException-Users"; }
         }
         
         string IMigrationMetadata.Source
